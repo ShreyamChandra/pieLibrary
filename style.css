@@ -1,3 +1,15 @@
+.library-floor-map{
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    /* align-content: center; */
+    justify-content: center;
+}
+
+.library-floor-row{
+    width: 10%;
+    display: flexbox;
+}
 .map-container{
     width: 100%;
     position: relative;
@@ -5,10 +17,11 @@
     /* right: 0%; */
     float: right;
 }
+
 .table-container{
     /* position: absolute; */
     /* right: 0%; */
-    width: 125;
+    width: 100%;
     height:100;
     display: flex;
 
@@ -45,11 +58,14 @@
 }
 
 .seat-number{
-    width: 20;
-    color: aliceblue;
+    width: 25%;
+    margin: 0;
+    font-size: 125%;
+    color:white;
+    font-weight: bold;
     text-align: center;
-    background-color: BLUE;
+    background-color: #566dec;
     writing-mode: vertical-lr;
     height: 100%;
-
+    border-radius: 10px;
 }
