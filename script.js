@@ -64,8 +64,10 @@ window.onload = function(){
                 this.document.getElementById('row_4').appendChild(newTableContainer);
             } else if(count <= 50){
                 this.document.getElementById('row_5').appendChild(newTableContainer);
-            } else {
+            } else if(count <= 60){
                 this.document.getElementById('row_6').appendChild(newTableContainer);
+            } else {
+                this.document.getElementById('row_7').appendChild(newTableContainer);
             }
 
             
