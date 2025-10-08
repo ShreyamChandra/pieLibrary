@@ -1,10 +1,27 @@
+.map-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    /* right: 0%; */
+    float: right;
+}
+.table-container{
+    /* position: absolute; */
+    /* right: 0%; */
+    width: 125;
+    height:100;
+    display: flex;
+
+}
+
 .seatbox {
     position: relative;
-    width: 50;
-    height: 50;
+    width: 100;
+    height: 100;
+    right: 0;
     /* overflow: auto; */
     /* border: solid; */
-    background: grey;
+    /* background: grey; */
     /* padding: 10px; */
     /* border: 100px; */
     border-color: black;
@@ -25,4 +42,14 @@
     right: 0;
     top: 0;
     /* translate: ; */
+}
+
+.seat-number{
+    width: 20;
+    color: aliceblue;
+    text-align: center;
+    background-color: BLUE;
+    writing-mode: vertical-lr;
+    height: 100%;
+
 }

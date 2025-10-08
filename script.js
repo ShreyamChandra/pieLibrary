@@ -10,15 +10,54 @@ window.onload = function(){
         console.log(data);
         var seatMap = data.values;
 
-        const mapDiv = this.document.createElement('div');
+        floorDiv = this.document.createElement('div');
         let count = 1;
-        while(count <= seatMap.length){
-            let seatNumber = data[count][0];
-            let seatStatus = data[count][1];
+        while(count < seatMap.length){
+            let seatNumber = seatMap[count][0];
+            let seatStatus = seatMap[count][1];
+
+            //seat image
+            seatImage = this.document.createElement('img');
+            seatImage.src = 'img/Seat.png';
+            seatImage.alt = 'seat image';
+            seatImage.classList.add('img-container-seat')
+
+            //reserved image
+            reservedImage = this.document.createElement('img');
+            reservedImage.src = 'img/reserved-img.png';
+            reservedImage.alt = 'reserved';
+            reservedImage.classList.add('img-container-reserved')
+              
             
-            mapDiv
+            //seatbox
+            newSeatBox = this.document.createElement('div');
+            newSeatBox.classList.add("seatbox");
+            newSeatBox.appendChild(seatImage);
+            if(seatStatus==='Reserved'){
+                newSeatBox.appendChild(reservedImage);
+            }
+            
+            //seat number
+            newSeatNumberContainer = this.document.createElement('div');
+            newSeatNumberContainer.classList.add('seat-number')
+            newSeatNumberContainer.innerHTML =seatNumber;
+            
+            
+            //table container div
+            newTableContainer = this.document.createElement('div');
+            newTableContainer.classList.add('table-container')
+            newTableContainer.appendChild(newSeatBox);
+            newTableContainer.appendChild(newSeatNumberContainer);
+
+
+            floorDiv.appendChild(newTableContainer);
 
             count++;
         }
+        
+        console.log(floorDiv);
+        this.document.getElementById('dynamic-Map').appendChild(floorDiv);
+        // this.document.getElementById('dynamic-Map').innerHTML = floorDiv;
+
     })
 }
