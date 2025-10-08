@@ -55,17 +55,17 @@ window.onload = function(){
             //aligning seats
             //first 20 seats
             if(count<=10){
-                this.document.getElementById('row_9').appendChild(newTableContainer);
-            } else if(count <= 20){
-                this.document.getElementById('row_8').appendChild(newTableContainer);
-            } else if(count <= 30){
-                this.document.getElementById('row_7').appendChild(newTableContainer);
-            } else if(count <= 40){
-                this.document.getElementById('row_5').appendChild(newTableContainer);
-            } else if(count <= 50){
-                this.document.getElementById('row_3').appendChild(newTableContainer);
-            } else {
                 this.document.getElementById('row_1').appendChild(newTableContainer);
+            } else if(count <= 20){
+                this.document.getElementById('row_2').appendChild(newTableContainer);
+            } else if(count <= 30){
+                this.document.getElementById('row_3').appendChild(newTableContainer);
+            } else if(count <= 40){
+                this.document.getElementById('row_4').appendChild(newTableContainer);
+            } else if(count <= 50){
+                this.document.getElementById('row_5').appendChild(newTableContainer);
+            } else {
+                this.document.getElementById('row_6').appendChild(newTableContainer);
             }
 
             
